@@ -10,7 +10,7 @@ class Registro extends Component {
             edad:0,
             ciudad: 'CDMX',
             sexo: 'M',
-            genero: 'ROCK'
+            genero: []
         }
     }
 
@@ -24,6 +24,7 @@ class Registro extends Component {
 
     onClickSubmit = (e) => {
         const URL = 'https://playerly.herokuapp.com/usuario';
+        //const URL = '/usuario';
         console.log(this.state);    
         e.preventDefault();         //evitar que se renderice cuando se oprime el boton
         axios.post(URL, this.state)
@@ -34,8 +35,18 @@ class Registro extends Component {
         });
     }
 
+    handleCheckbox = (e) => {
+        const newArray = [...this.state.genero];
+
+        this.state.genero.indexOf(e.target.id) === -1
+        ? newArray.push(e.target.id)
+        : newArray.splice(newArray.indexOf(e.target.id), 1);
+        
+        this.setState({genero: newArray});
+    }
+
     render() {
-        //console.log(this.state);
+        console.log(this.state);
         return (
             <div className="container-fluid p-0 ">
                 <div className="row">
@@ -60,13 +71,11 @@ class Registro extends Component {
                                 <option value="M">Masculino</option>
                                 <option value="F">Femenino</option>
                             </select>
-                            <label>Género musical favorito</label>
-                            <select id="genero" onChange={this.onChangeInput} className="form-control">
-                                <option value="ROCK">Rock</option>
-                                <option value="POP">Pop</option>
-                                <option value="METAL">Metal</option>
-                                <option value="REGGAE">Reggae</option>
-                            </select>
+                            <label>Género musical favorito</label><br></br>
+                                <input type="checkbox" id="ROCK" onClick={this.handleCheckbox} />Rock<br></br>
+                                <input type="checkbox" id="POP" onClick={this.handleCheckbox} />Pop<br></br>
+                                <input type="checkbox" id="REGGAE" onClick={this.handleCheckbox} />Reggae<br></br>
+                                <input type="checkbox" id="METAL" onClick={this.handleCheckbox} />Metal<br></br>
                             <button type="submit" className="btn btn-dark mt-5">Registrarse</button>
                             </div>
                         </form>
