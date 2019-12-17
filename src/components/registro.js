@@ -51,18 +51,34 @@ class Registro extends Component {
             <div className="container-fluid p-0 ">
                 <div className="row">
                     <div className="col-md-6">
+      
+                        <img className="img-fluid h-100 w-100" src="https://i.ibb.co/7NYR4V8/playlist.png">
+                        </img>
+                    </div>
+                    <div className="col-md-6  p-5 justify-content-center">
+                        <div className="row pt-5">
+                            <div className="col-md-12 pt-5 text-center">
+                           <img src="https://i.ibb.co/sbFYy4n/Asset-1.png"></img>
+                            </div> </div>
+                        <div className="row pt-5">
+                        <div className="col-12">
+                        <form className="w-100">
+
                         <img className="img-fluid h-100" src="https://i.ibb.co/ss84wSh/playlist.png" alt="img">
                         </img>
                     </div>
                     <div className="col-md-6 d-flex align-items-center p-5">
                         <form className="w-100" onSubmit={this.onClickSubmit}>
+
                             <div className="form-group">
                             <label>Nombre</label>
                             <input id="nombre" className="form-control" onChange={this.onChangeInput}></input>
                             <label>Edad</label>
                             <input id="edad" className="form-control" onChange={this.onChangeInput}></input>
                             <label>Ciudad</label>
+
                             <select id="ciudad" onChange={this.onChangeInput} className="form-control">
+
                                 <option value="CDMX">Ciudad de México</option>
                                 <option value="EDOMEX">Estado de México</option>
                             </select>
@@ -79,6 +95,8 @@ class Registro extends Component {
                             <button type="submit" className="btn btn-dark mt-5">Registrarse</button>
                             </div>
                         </form>
+                        </div>
+                        </div>
                     </div>
                 </div>
             </div>
