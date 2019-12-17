@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-∫
+
 class Registro extends Component {
 
     constructor(props) {
@@ -59,8 +59,6 @@ class Registro extends Component {
                     <div className="row pt-5">
                         <div className="col-md-12 pt-5 text-center">
                             <img src="https://i.ibb.co/sbFYy4n/Asset-1.png"></img>
-                            <img src="https://loremflickr.com/320/240/people"></img>
-                            <img src="https://loremflickr.com/320/240/people"></img>
                         </div>
                     </div>
                     <div className="row pt-5">
