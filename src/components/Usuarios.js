@@ -12,7 +12,7 @@ class Usuarios extends Component {
     }
 
     componentDidMount(){
-        const URL = 'https://playerly.herokuapp.com/usuarios/all';
+        const URL = 'https://playerly.herokuapp.com/all/usuarios';
         //const generoParam = 'ROCK'
         // eslint-disable-next-line
         //axios.get(`${URL}${generoParam}`)
