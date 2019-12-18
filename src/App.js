@@ -4,14 +4,33 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 //import Popper from 'popper.js';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import './App.css';
+
 import Registro from './components/registro';
+
+import {
+  Route,
+  NavLink,
+  HashRouter
+} from "react-router-dom";
+
+import Usuarios from './components/Usuarios';
 
 class App extends Component {
   render(){
     return(
-      <div>
-        <Registro></Registro>
-      </div>
+        <HashRouter>
+
+          <Registro></Registro>
+        
+          <div className="header">
+              <NavLink to="/"></NavLink>
+              <button type="submit" onClick={Registro.onClickSubmit}><NavLink to="/Usuarios">Registrarse</NavLink></button>
+          </div>
+          <div className="content">
+              <Route exact path="/" component={Registro}/>
+              <Route path="/Usuarios" component={Usuarios}/>
+          </div>
+        </HashRouter>
     )
   }
 }

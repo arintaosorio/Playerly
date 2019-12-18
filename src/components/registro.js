@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+// import {
+//     Route,
+//     NavLink,
+//     HashRouter
+//   } from "react-router-dom";
+
+// import Usuarios from './Usuarios';
+
 class Registro extends Component {
 
     constructor(props) {
@@ -48,56 +56,58 @@ class Registro extends Component {
     render() {
         console.log(this.state);
         return (
-            <div className="container-fluid p-0 ">
-                <div className="row">
-                    <div className="col-md-6">
-                        <img className="img-fluid h-100 w-100" src="https://i.ibb.co/7NYR4V8/playlist.png">
-                        </img>
-                    </div>
-           
-                <div className="col-md-6  p-5 justify-content-center">
-                    <div className="row pt-5">
-                        <div className="col-md-12 pt-5 text-center">
-                            <img src="https://i.ibb.co/sbFYy4n/Asset-1.png"></img>
+            
+                <div className="container-fluid p-0 ">
+                    <div className="row">
+                        <div className="col-md-6">
+                            <img className="img-fluid h-100 w-100" src="https://i.ibb.co/7NYR4V8/playlist.png" alt="">
+                            </img>
                         </div>
-                    </div>
-                    <div className="row pt-5">
-                        <div className="col-12">
-                       
-                            <div className="col-md-12 d-flex align-items-center p-5">
-                                <form className="w-100" onSubmit={this.onClickSubmit}>
+            
+                    <div className="col-md-6  p-5 justify-content-center">
+                        <div className="row pt-5">
+                            <div className="col-md-12 pt-5 text-center">
+                                <img src="https://i.ibb.co/sbFYy4n/Asset-1.png" alt=""></img>
+                            </div>
+                        </div>
+                        <div className="row pt-5">
+                            <div className="col-12">
+                        
+                                <div className="col-md-12 d-flex align-items-center p-5">
+                                    <form className="w-100" onSubmit={this.onClickSubmit}>
 
-                                    <div className="form-group">
-                                        <label>Nombre</label>
-                                        <input id="nombre" className="form-control" onChange={this.onChangeInput}></input>
-                                        <label>Edad</label>
-                                        <input id="edad" className="form-control" onChange={this.onChangeInput}></input>
-                                        <label>Ciudad</label>
+                                        <div className="form-group">
+                                            <label>Nombre</label>
+                                            <input id="nombre" className="form-control" onChange={this.onChangeInput}></input>
+                                            <label>Edad</label>
+                                            <input id="edad" className="form-control" onChange={this.onChangeInput}></input>
+                                            <label>Ciudad</label>
 
-                                        <select id="ciudad" onChange={this.onChangeInput} className="form-control">
+                                            <select id="ciudad" onChange={this.onChangeInput} className="form-control">
 
-                                            <option value="CDMX">Ciudad de México</option>
-                                            <option value="EDOMEX">Estado de México</option>
-                                        </select>
-                                        <label>Sexo</label>
-                                        <select id="sexo" onChange={this.onChangeInput} className="form-control">
-                                            <option value="M">Masculino</option>
-                                            <option value="F">Femenino</option>
-                                        </select>
-                                        <label className="pt-3 font-weight-bold">Género musical favorito</label><br></br>
-                                        <input type="checkbox" id="ROCK" onClick={this.handleCheckbox} />Rock<br></br>
-                                        <input type="checkbox" id="POP" onClick={this.handleCheckbox} />Pop<br></br>
-                                        <input type="checkbox" id="REGGAE" onClick={this.handleCheckbox} />Reggae<br></br>
-                                        <input type="checkbox" id="METAL" onClick={this.handleCheckbox} />Metal<br></br>
-                                        <button type="submit" className="btn btn-dark mt-5">Registrarse</button>
-                                    </div>
-                                </form>
+                                                <option value="CDMX">Ciudad de México</option>
+                                                <option value="EDOMEX">Estado de México</option>
+                                            </select>
+                                            <label>Sexo</label>
+                                            <select id="sexo" onChange={this.onChangeInput} className="form-control">
+                                                <option value="M">Masculino</option>
+                                                <option value="F">Femenino</option>
+                                            </select>
+                                            <label className="pt-3 font-weight-bold">Género musical favorito</label><br></br>
+                                            <input type="checkbox" id="ROCK" onClick={this.handleCheckbox} />Rock<br></br>
+                                            <input type="checkbox" id="POP" onClick={this.handleCheckbox} />Pop<br></br>
+                                            <input type="checkbox" id="REGGAE" onClick={this.handleCheckbox} />Reggae<br></br>
+                                            <input type="checkbox" id="METAL" onClick={this.handleCheckbox} />Metal<br></br>
+                                        
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            </div>
+                </div>
+
         );
     }
 }
